@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+navbar {
+    background-color: greenyellow;
+}
+navbar > li {
+    display: inline;
+}

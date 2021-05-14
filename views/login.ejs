@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <%- include('../templates/header'); %>
+        <title>Login Page</title>
+    </head>
+    <body>
+        <%- include('../templates/navbar'); %>
+        <h1>Login Page</h1>
+        <div>
+            <form action='auth' method='post'>
+                <label name='username'>username</label>
+                <input name='username' type='text'>
+                <br>
+                <label name='password'>password</label>
+                <input name='password' type='password'>
+                <br>
+                <input type="submit" placeholder="Login">
+            </form>
+        </div>
+    </body>
+</html>

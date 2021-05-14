@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <%- include('../templates/header'); %>
+        <title>Home Page</title>
+    </head>
+    <body>
+        <%- include('../templates/navbar'); %>
+        <h1>Home</h1>
+        <div>
+            <div style='border: 1px solid black'>
+                username: <%= user.username %><br>
+                password: <%= user.password %><br>
+            </div>
+            <%= status %>
+        </div>
+    </body>
+</html>

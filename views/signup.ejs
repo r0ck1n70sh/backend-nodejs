@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <%- include('../templates/header'); %>
+        <title>Signup Page</title>
+    </head>
+    <body>
+        <%- include('../templates/navbar'); %>
+        <h1>Signup Page</h1>
+        <div>
+            <form action='newUser' method='post'>
+                <label name='username'>username</label>
+                <input name='username' type='text'>
+                <br>
+                <label name='password'>password</label>
+                <input name='password' type='password'>
+                <br>
+                <label name='password2'>password confirm</label>
+                <input name='password2' type='password'>
+                <br>
+                <input type="submit" placeholder="Signup">
+            </form>
+        </div>
+    </body>
+</html>
