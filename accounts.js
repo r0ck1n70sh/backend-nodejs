@@ -30,9 +30,8 @@ router.use(session({
 }));
 
 router.get('/dashboard', (req, res) => {
-    const user = req.session.user || {} ;
-    console.log(`dashboard: ${req.session}`);
-
+    const user = req.session.user || {};
+    
     if(req.session.loggedIn == true)
         res.render(
             join(__dirViews, '/home'),
@@ -46,7 +45,11 @@ router.get('/dashboard', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render(join(__dirViews, '/login'));
+    if(req.session.loggedIn){
+        res.redirect('/accounts/dashboard');
+    } else { 
+        res.render(join(__dirViews, '/login'));
+    }
 });
 
 router.get('/signup', (req, res) => {
@@ -108,4 +111,5 @@ router.post('/newUser', async (req, res) => {
         )
 });
 
-module.exports = router;
+// console.log(typeof session.Session);
+module.exports = {router, session};
